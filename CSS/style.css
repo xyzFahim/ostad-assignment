@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800;900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&display=swap');
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #00ff6a;
+}
 
 * {
     margin: 0;
@@ -13,34 +16,21 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root {
-    --bg-color: #1f242d;
-    --second-bg-color: #323946;
-    --text-color: #fff;
-    --main-color: #00ff6a;
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
 
 body {
-    background: var(--bg-color);
-    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
 }
 
-section {
-    min-height: 100vh;
-}
-
-/* navbar and header styles  */
-.header {
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 25%;
+    padding: 18px 25%;
     background: var(--bg-color);
     display: flex;
     justify-content: space-between ;
@@ -50,7 +40,7 @@ section {
 
 
 .navbar a {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--text-color);
     margin-left: 14px;
 }
@@ -77,29 +67,61 @@ section {
     color: var(--second-bg-color) !important;
 }
 
-/* footer style  */
-footer {
-    background-color: #333;
-    color: #fff;
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    color: white;
+}
+
+section {
     padding: 20px;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-p {
-    margin: 0;
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
 }
 
-.social-icons {
-    margin-top: 10px;
+.card-body {
+    padding: 20px;
 }
 
-.social-icons a {
-    margin: 0 10px;
-    display: inline-block;
+#resultCard {
+    display: none;
+}
+
+#closeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
