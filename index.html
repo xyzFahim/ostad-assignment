@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ostad Assignment</title>
    <link rel="stylesheet" href="Assets/CSS/style.css">
-   <link rel="stylesheet" href="Assets/CSS/bootstrap.css">
+   <!-- <link rel="stylesheet" href="Assets/CSS/bootstrap.css"> -->
 </head>
 <body>
     <header>
@@ -29,75 +29,92 @@
 
     <section class="banner" id="home">
         <div>
-            <img src="Assets/Images/car1.jpg" alt="Car pic" class="blurred-image">
+            <img src="Assets/Images/hero-bg.jpg" alt="Car-pic" class="blurred-image">
             <div class="overlay">
             <div class="content">
                 <h1>Welcome to My Webpage</h1>
-                <p>VINTAGE CAR SPECIALIST</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, alias quasi ducimus repellendus molestias cupiditate.</p>
 
+                 <button id="openAgeChecker" onclick="openAgeChecker()">Enter Your Age</button>
+
+        <div id="ageCheckerModal">
+            <div id="ageCheckerContainer">
                 <label for="age">Enter your age:</label>
                 <input type="number" id="age" name="age">
-                <button class="btn1" onclick="checkAge()">Check</button>
+                <button onclick="checkAge()">Check</button>
+                <button id="closeAgeChecker" onclick="closeAgeChecker()">Close</button>
                 <div id="result"></div>
             </div>
+        </div>
+            </div>
 
-           
         </div>
     </section>
 
     <section class="services" id="services">
         <h2 class="heading">My <span>Services</span></h2>
 
-        <div class="services-container">
-            <div class="services-box">
-                <h3>Web Developer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus corrupti provident, sequi rerum qui dolorum veritatis, nostrum perspiciatis unde magni cupiditate, cum architecto! Totam numquam ducimus, laboriosam nostrum velit aut.</p>
-                
-            </div>
+    <div class="card1-container">
+        <div class="card1">
+            <div class="image-content">
+                <span class="overlay1"></span>
 
-            <div class="services-box">
-                <h3>Graphics Designer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus corrupti provident, sequi rerum qui dolorum veritatis, nostrum perspiciatis unde magni cupiditate, cum architecto! Totam numquam ducimus, laboriosam nostrum velit aut.</p>
-                
-            </div>
+                <div class="card1-image">
+                    <img src="Assets/Images/Profiles/p1.jpg" alt="" class="card1-img">
+                </div>
 
-            <div class="services-box">
-                <h3>Digital Marketing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus corrupti provident, sequi rerum qui dolorum veritatis, nostrum perspiciatis unde magni cupiditate, cum architecto! Totam numquam ducimus, laboriosam nostrum velit aut.</p>
+                <div class="card1-content">
+                    <h2 class="name">David Dell</h2>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nemo esse omnis laudantium cumque nihil ipsum reprehenderit, commodi vero, impedit illum earum eos velit aut, officiis est adipisci minima soluta!</p>
+
+                    <button class="button1">View More</button>
+                </div>
             </div>
         </div>
+
+        <div class="card1">
+            <div class="image-content">
+                <span class="overlay1"></span>
+
+                <div class="card1-image">
+                    <img src="Assets/Images/Profiles/p2.jpg" alt="" class="card1-img">
+                </div>
+
+                <div class="card1-content">
+                    <h2 class="name">Mugiwara</h2>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nemo esse omnis laudantium cumque nihil ipsum reprehenderit, commodi vero, impedit illum earum eos velit aut, officiis est adipisci minima soluta!</p>
+
+                    <button class="button1">View More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card1">
+            <div class="image-content">
+                <span class="overlay1"></span>
+
+                <div class="card1-image">
+                    <img src="Assets/Images/Profiles/p3.jpg" alt="" class="card1-img">
+                </div>
+
+                <div class="card1-content">
+                    <h2 class="name">Shirohige</h2>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nemo esse omnis laudantium cumque nihil ipsum reprehenderit, commodi vero, impedit illum earum eos velit aut, officiis est adipisci minima soluta!</p>
+
+                    <button class="button1">View More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     </section>
 
 <footer>
-    <p>&copy; 2024 Responsive Page. All rights reserved.</p>
+    <p>&copy; 2024 Ostad Assignment Page | All rights reserved by xyzFahim.</p>
 </footer>
 
-<script>
-function checkAge() {
-    var age = document.getElementById("age").value;
-    age = parseInt(age);
+<script src="Assets/JS/script.js">
 
-    if (age >= 18) {
-        document.getElementById("result").innerHTML = "<div class='card'>You are an adult</div>";
-    } else {
-        document.getElementById("result").innerHTML = "<div class='card'>You are a child</div>";
-    }
-}
-
-    window.addEventListener("scroll", function(){
-        var header = document.querySelector("nav");
-        header.classList.toggle("sticky", window.scrollY > 50);
-    })
-
-    function showSidebar(){
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'flex'
-    }
-
-    function hideSidebar(){
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'none'
-    }
 </script>
 
 </body>
