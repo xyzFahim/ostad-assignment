@@ -11,9 +11,9 @@ function checkAge() {
     age = parseInt(age);
 
     if (age >= 18) {
-        document.getElementById("result").innerHTML = "<div class='card'>You are an adult</div>";
+        document.getElementById("result").innerHTML = "<div class='resultcard'>You are an adult</div>";
     } else {
-        document.getElementById("result").innerHTML = "<div class='card'>You are a child</div>";
+        document.getElementById("result").innerHTML = "<div class='resultcard'>You are a child</div>";
     }
 }
 
