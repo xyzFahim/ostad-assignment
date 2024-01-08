@@ -214,9 +214,6 @@ label {
     margin-bottom: 10px;
 }
 
-
-
-
 #result {
     margin-top: 20px;
     font-size: 18px;
@@ -227,6 +224,10 @@ label {
 }
 /* age checker styling  */
 
+.round {
+    border-radius: 12px;
+    background-color: var(--text-color);
+}
 
 /* team section styling starts*/
 .card1 {
