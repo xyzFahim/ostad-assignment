@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+body {
+	background: #f1fbff;
+}
 
 :root {
     --bg-color: #1f242d;
@@ -7,35 +13,7 @@
     --main-color: #00ff6a;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none !important;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: var(--bg-color) !important;
-    color: var(--text-color) !important;
-}
-
-
-section {
-    /* min-height: 100vh; */
-    margin-bottom: 30px;
-}
-
-/* header & navbar styling  */
-
+/* navbar styling starts  */
 nav {
     position: fixed!important;
     top: 0!important;
@@ -50,8 +28,8 @@ nav {
 }
 
 nav.sticky {
-    padding: 20px 100px !important; 
     background: var(--bg-color)!important;
+    color: var(--bg-color) !important;
 }
 
 nav.sticky ul li a:hover,
@@ -59,10 +37,11 @@ nav.sticky .active {
     color: var(--main-color) !important;
 }
 
+
 nav .logo {
     position: relative;
     font-weight: 700;
-    color: var(--text-color) !important;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 32px;
     text-transform: uppercase;
@@ -100,178 +79,74 @@ nav ul li a.active {
 
 header.sticky .logo,
 header.sticky ul li a {
- color: var(--text-color) !important;
+ color: var(--bg-color) !important;
+}
+/* navbar styling ends  */
+
+.section-padding {
+	padding: 100px 0;
+    margin-top: 50px;
 }
 
+/* project section styling  */
 
-/* header & navbar styling ends */
-.btn1{
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--main-color);
-    border-radius: 35px;
-    background: transparent;
-    border: 2px solid var(--main-color);
-    padding: 8px 18px !important;
+.img-fluid {
+    border-radius:25px 25px 0 0 ;
 }
 
-.btn1:hover {
-    background: var(--main-color);
-    color: var(--second-bg-color) !important;
+.card2 {
+    border-radius: 25px;
+    background-color: var(--text-color);
+    border: .2rem solid var(--text-color);
+    transition: .5s ease;
+    margin-bottom: 20px;
 }
 
-.banner {
+/* hero content styling  */
+.hero-section {
     position: relative;
-}
-
-.image-wrapper {
-    min-width: 100%;
-    overflow: hidden;
-}
-
-.blurred-image {
-    width: 100%; 
-    height: auto; 
-    display: block; 
-}
-
-.banner img {
-    width: 100% ;
-    height: 1000px;
-}
-
-.overlay {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
     text-align: center;
-    z-index: 1;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(home-1.jpg) ;
+    padding: 100px 20px;
+    height: 100vh;
+	background-size: cover;
+	background-position: center;
 }
 
-.content h1 {
-    font-size: 48px;
-    letter-spacing: 2px;
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.content p {
-    font-size: 18px;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-}
-
-
-span {
-    color: var(--main-color);
-}
-
-/*service & card styling starts */
-
-.heading {
-    text-align: center;
-    font-size: 48px;
-}
-
-.services h2 {
+.hero-content p {
+    font-size: 1.2em;
     margin-bottom: 30px;
 }
-.card1-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 32px;
-}
 
+/* age checker styling  */
 
-.card1 {
-    width: 500px;
-    border-radius: 25px;
-    background-color: var(--second-bg-color);
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border: .2rem solid var(--bg-color);
-    transition: .5s ease;
-}
-
-.card1:hover{
-    border-color: var(--main-color);
-    transform: scale(1.02);
-}
-
-.card1-image {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background: var(--bg-color);
-    padding: 3px;
-}
-
-.card1-image .card1-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    /* border: 4px solid var(--main-color); */
-}
-
-.image-content,
-.card1-content {
-    padding: 16px 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.name {
-    font-size: 18px;
-    font-weight: 500;
-    /* color: #333; */
-    margin-bottom: 10px;
-}
-
-.description {
-    font-size: 14px;
-    /* color: #707070; */
-    text-align: center;
-    margin-bottom: 10px;
-
-}
-
-.button1 {
-    width: 35%;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--main-color);
-    background: transparent;
-    border: 2px solid var(--main-color);
-    border-radius: 25px !important;
-    padding: 8px 18px !important;
-    margin: 14px;
+.btn2{
+    background-color: var(--main-color);
+    color: var(--bg-color) ;
     cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    border-radius: 10px;
 }
 
-.button1:hover {
-    background: var(--main-color);
-    color: var(--second-bg-color) !important;
+.btn2:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
 }
-/* card styling ends */
-
-/* enter your age styling starts  */
 
 #openAgeChecker {
     width: 40%;
@@ -282,6 +157,7 @@ span {
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 #openAgeChecker:hover {
@@ -302,8 +178,9 @@ span {
 }
 
 #ageCheckerContainer {
-    background-color: var(--second-bg-color);
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+        backdrop-filter: blur(10px);
+    padding: 30px;
     border-radius: 15px;
     text-align: center;
 }
@@ -314,33 +191,30 @@ span {
     padding: 10px;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 20px;
+    text-decoration: none;
+    /* width: 100%; */
 }
 
+
 input {
-    margin-bottom: 10px !important;
+    margin-bottom: 20px ;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
     font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+    border: 0;
 }
 
-button {
-    background-color: var(--main-color);
-    color: var(--bg-color) ;
-    cursor: pointer;
-    padding: 10px !important;
-    /* width: 100%; */
-    box-sizing: border-box;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+label {
+    margin-bottom: 10px;
 }
 
-button:hover {
-    background-color: var(--main-color);
-    color: var(--bg-color);
-}
+
+
 
 #result {
     margin-top: 20px;
@@ -350,20 +224,136 @@ button:hover {
     padding: 10px;
 
 }
+/* age checker styling  */
 
 
-
-/* enter your age styling ends  */
-
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+/* team section styling starts*/
+.card1 {
+        border-radius: 25px;
+        background-color: var(--text-color);
+        border: .2rem solid var(--text-color);
+        transition: .5s ease;
+        margin-bottom: 20px;
+        gap: 10px;
 }
 
-/* media styling  */
+.card1:hover{
+    border-color: var(--main-color) !important;
+    transform: scale(1.02);
+}
+
+.button1 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color) !important;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 25px ;
+    padding: 8px 18px !important;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button1:hover {
+    background: var(--main-color);
+    color: var(--text-color) !important;
+}
+
+
+.button2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--bg-color) !important;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 25px ;
+    padding: 8px 18px !important;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button2:hover {
+    background: var(--main-color);
+    color: var(--text-color) !important;
+}
+/* team section styling ends*/
+
+.btn1 {
+    background: var(--main-color);
+}
+
+.btn1:hover {
+    background: var(--main-color);
+    color: var(--text-color);
+}
+
+
+/* footer styling section starts */
+footer {
+	background: var(--bg-color);
+	padding: 86px 0;
+}
+.single-content {
+	text-align: center;
+	padding: 115px 0;
+}
+.single-box p {
+	color: #fff;
+	line-height: 1.9;
+
+}
+.single-box h3 {
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+}
+.single-box .card-area i {
+	color: #ffffff;
+	font-size: 20px;
+	margin-right: 10px;
+}
+.single-box ul {
+	list-style: none;
+	padding: 0;
+}
+.single-box ul li a {
+	text-decoration: none;
+	color: #fff;
+	line-height: 2.5;
+	font-weight: 100;
+}
+.single-box h2 {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+}
+#basic-addon2 {
+	background: #fe1e4f;
+	color: #fff;
+}
+.socials i {
+	font-size: 18px;
+	margin-right: 15px;
+}
+
+.follow {
+    margin-top: 40px;
+}
+
+
+/* media section  */
+@media (max-width: 767px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.single-box {
+		margin-bottom: 50px;
+	}
+}
 
 @media (max-width: 991px) {
     .sidebar {
