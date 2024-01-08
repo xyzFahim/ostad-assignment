@@ -24,7 +24,7 @@ function checkAge() {
 
         resultContainer.innerHTML = "<div class='resultcard adult-card'><img src='Assets/img/Adult1.jpg' alt='Adult Image'><p>You are an adult</p></div>";
 
-    } else if (age >= 0) {
+    } else if (age >= 1) {
         resultContainer.innerHTML = "<div class='resultcard child-card'><img src='Assets/img/Child1.jpg' alt='Child Image'><p>You are a child</p></div>";
     } else {
 
@@ -37,7 +37,7 @@ function checkAge() {
 // window scrolling animation 
     window.addEventListener("scroll", function(){
         var header = document.querySelector("nav");
-        header.classList.toggle("sticky", window.scrollY > 0);
+        header.classList.toggle("sticky", window.scrollY > 100);
     })
 
     function showSidebar(){

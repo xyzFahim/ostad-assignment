@@ -13,6 +13,22 @@ body {
     --main-color: #00ff6a;
 }
 
+
+input {
+    margin-bottom: 20px ;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
 /* navbar styling starts  */
 nav {
     position: fixed!important;
@@ -188,7 +204,7 @@ header.sticky ul li a {
 }
 
 #closeAgeChecker {
-    background-color: red;
+    background-color: rgb(226, 0, 0);
     padding: 10px;
     cursor: pointer;
     border: none;
@@ -269,23 +285,6 @@ header.sticky ul li a {
     max-width: 100%; 
     border-radius: 8px; 
 }
-
-
-input {
-    margin-bottom: 20px ;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 16px;
-    outline: none;
-    border-radius: 5px;
-    border: 0;
-}
-
-label {
-    margin-bottom: 10px;
-}
-
 
 /* age checker styling  */
 
@@ -430,12 +429,12 @@ footer {
 
 @media (max-width: 768px) {
     .hero-section{
-    padding: 80px 20px; /* Adjust padding for smaller screens */
+    padding: 80px 20px;
 }
 }
 
 @media (max-width: 576px) {
     .hero-section{
-    padding: 60px 20px; /* Further adjust padding for even smaller screens */
+    padding: 60px 20px;
 }
 }
