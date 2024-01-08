@@ -9,13 +9,15 @@ function closeAgeChecker() {
 function checkAge() {
     var age = document.getElementById("age").value;
     age = parseInt(age);
-
-    if (age >= 18) {
-        document.getElementById("result").innerHTML = "<div class='resultcard'>You are an adult</div>";
-    } else {
-        document.getElementById("result").innerHTML = "<div class='resultcard'>You are a child</div>";
+    
+        if (age >= 18) {
+            document.getElementById("result").innerHTML = "<div class='resultcard'>You are an adult</div>";
+        } else if (age >= 0) {
+            document.getElementById("result").innerHTML = "<div class='resultcard'>You are a child</div>";
+        } else {
+            document.getElementById("result").innerHTML = "<div class='resultcard'>Invalid Age!</div>";
+        }
     }
-}
 
 
     window.addEventListener("scroll", function(){
